@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    tools:context=".fragments.Home">
+
+    <RelativeLayout
+        android:id="@+id/relative_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_p"
+            style="@style/circle_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_profile" />
+
+        <TextView
+            android:id="@+id/text_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="18dp"
+            android:layout_toEndOf="@+id/image_p"
+            android:text="Welcome Kleitomberg!"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notify_ic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/baseline_notifications_24" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_find_place"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative_header"
+        android:layout_alignStart="@id/relative_header"
+        android:layout_marginTop="26dp"
+        android:text="Find Your Favorites Place!"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_find_place"
+        android:layout_alignStart="@id/text_find_place"
+        android:layout_marginTop="20dp"
+        android:text="Place to visit"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/text_see_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_find_place"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="See all"
+        android:textColor="@color/black" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_see_all"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/places_style"
+                    android:layout_width="200dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/nature"
+                    app:shapeAppearanceOverlay="@style/places_style" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_london"
+                    style="@style/places_style"
+                    android:layout_width="200dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/london"
+                    app:shapeAppearanceOverlay="@style/places_style" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/places_style"
+                    android:layout_width="200dp"
+                    android:layout_height="280dp"
+                    android:src="@drawable/mountains_road"
+                    app:shapeAppearanceOverlay="@style/places_style" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/popular_tours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scroll_horizontal"
+        android:layout_alignStart="@id/text_find_place"
+        android:layout_marginTop="20dp"
+        android:text="Popular tours"
+        android:textColor="@color/black" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popular_tours"
+        android:layout_alignStart="@id/text_find_place"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_popular1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_places">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_popular1"
+                        style="@style/popular_image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/nature"
+                        app:shapeAppearanceOverlay="@style/popular_image" />
+
+                    <TextView
+                        android:id="@+id/title_card_popupar1"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/image_popular1"
+                        android:text="Um lugar ai"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/description_pupular1"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_card_popupar1"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/image_popular1"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="descrição bacana sobre o lugar da imagem"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/description_pupular1"
+                        android:layout_alignStart="@+id/description_pupular1"
+                        android:layout_marginTop="8dp"
+                        android:text="R$ 3.295.00" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/description_pupular1"
+                        android:background="@color/bg_splash"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/baseline_star_24" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_places">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_popular2"
+                        style="@style/popular_image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/mountains_road"
+                        app:shapeAppearanceOverlay="@style/popular_image" />
+
+                    <TextView
+                        android:id="@+id/title_card_popupar2"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/image_popular2"
+                        android:text="Um lugar ai"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/description_pupular2"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/title_card_popupar2"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/image_popular2"
+                        android:ellipsize="end"
+                        android:maxLines="3"
+                        android:text="descrição bacana sobre o lugar da imagem"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/description_pupular2"
+                        android:layout_alignStart="@+id/description_pupular2"
+                        android:layout_marginTop="8dp"
+                        android:text="R$ 3.295.00" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/description_pupular2"
+                        android:background="@color/bg_splash"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4.0"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/baseline_star_24" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
+</androidx.core.widget.NestedScrollView>
