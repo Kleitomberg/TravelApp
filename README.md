@@ -5,7 +5,7 @@
 </div>
 
 <div  align="center">
-<p>Praticando a integração do Firebase em um Projeto Android</p>
+<p>Praticando a construção de interfaces, navegação com BottomNavigation e a utilização de Fragments</p>
 Usando Java!
   </div>
 
