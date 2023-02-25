@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.TravelApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/bg_splash</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+
+        <item name="colorOnPrimary">@color/bg_splash</item>
+
+
+    </style>
+
+
+    <style name="circle_image">
+        <item name="android:background">@drawable/bg_image</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="places_style">
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/bg_places</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="cornerSize">6%</item>
+    </style>
+
+    <style name="popular_image">
+        <item name="android:background">@drawable/bg_places_image</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="cornerSizeTopLeft">6%</item>
+        <item name="cornerSizeBottomLeft">6%</item>
+
+    </style>
+</resources>
